@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sousa318.com/sitemap.xml
