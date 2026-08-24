@@ -30,8 +30,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS (Static Compiler for Performance) -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#0D9488',
+                        background: '#F9FAFB',
+                        text: '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
+                        'floating': '0 30px 60px -15px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
     
     <!-- Preload Critical Assets -->
     <link rel="preload" as="image" href="hero-bg.webp">
