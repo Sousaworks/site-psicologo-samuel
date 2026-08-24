@@ -30,29 +30,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1E3A8A',
-                        secondary: '#0D9488',
-                        background: '#F9FAFB',
-                        text: '#111827',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
-                        'floating': '0 30px 60px -15px rgba(0, 0, 0, 0.1)',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Tailwind CSS (Static Compiler for Performance) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="hero-bg.webp">
+    <link rel="preload" as="image" href="/assets/img/logo.png">
     
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -287,7 +270,7 @@
             class="fixed w-full top-0 z-50 bg-white shadow-sm py-4 transition-all duration-300">
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
             <a href="#hero" class="flex items-center gap-2">
-                <img src="/assets/img/logo.png" alt="Logo da clínica do Psicólogo e Neuropsicólogo Samuel em Tacaratu PE" class="h-12 md:h-14 w-auto" onerror="this.src='https://placehold.co/150x40/1E3A8A/FFFFFF?text=Samuel+Psicologia'">
+                <img src="/assets/img/logo.png" alt="Logo da clínica do Psicólogo e Neuropsicólogo Samuel em Tacaratu PE" class="h-12 md:h-14 w-auto" fetchpriority="high" loading="eager" onerror="this.src='https://placehold.co/150x40/1E3A8A/FFFFFF?text=Samuel+Psicologia'">
             </a>
             
             <!-- Desktop Menu -->
@@ -390,7 +373,7 @@
                 <div class="w-full lg:w-1/2">
                     <div class="relative">
                         <div class="absolute inset-0 bg-primary/10 transform translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
-                        <img src="sobre.webp" alt="Consultório do Psicólogo e Neuropsicólogo Samuel em Tacaratu PE" class="rounded-3xl shadow-soft w-full h-[500px] object-cover" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=Foto+Equipe'">
+                        <img src="sobre.webp" alt="Consultório do Psicólogo e Neuropsicólogo Samuel em Tacaratu PE" class="rounded-3xl shadow-soft w-full h-[500px] object-cover" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=Foto+Equipe'">
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2">
@@ -820,7 +803,7 @@
                 
                 <div class="text-center md:text-left max-w-sm">
                     <div class="bg-white p-3 rounded-xl inline-block mb-4 shadow-sm">
-                        <img src="/assets/img/logo.png" alt="Logo da clínica do Psicólogo e Neuropsicólogo Samuel em Tacaratu PE" class="h-12 md:h-14 w-auto" onerror="this.src='https://placehold.co/150x40/1E3A8A/FFFFFF?text=Samuel+Psicologia'">
+                        <img src="/assets/img/logo.png" alt="Logo da clínica do Psicólogo e Neuropsicólogo Samuel em Tacaratu PE" class="h-12 md:h-14 w-auto" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/150x40/1E3A8A/FFFFFF?text=Samuel+Psicologia'">
                     </div>
                     <p class="text-sm text-gray-400 mb-4">Acolhimento, embasamento técnico e foco no desenvolvimento da sua saúde mental em Pernambuco e no mundo.</p>
                 </div>
